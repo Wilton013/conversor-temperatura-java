@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -32,7 +31,7 @@ public class Main {
                     String celsiusTexto = campo.getText().trim();
 
                     double celsius = Double.parseDouble(celsiusTexto);
-                    double fahrenheit = celsius * 9.0 / 5.0 + 32;
+                    double fahrenheit = ConversorTemperatura.converterCelsiusParaFahrenheit(celsius);
 
                     textoResultado.setText(celsiusTexto + " ℃ é equivalante a " + fahrenheit + " ℉");
                 } catch (NumberFormatException erro) {
